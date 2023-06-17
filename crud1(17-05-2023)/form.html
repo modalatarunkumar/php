@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="insert.php" method="post">
+        <table>
+            <tr>
+                <td><label for="uname">Username:</label></td>
+                <td><input type="text" name="uname" id="uname"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email id:</label></td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="pwd">Password:</label></td>
+                <td><input type="password" name="pwd" id="pwd"><input type="button" value="show" onclick="fun1(this)"></td>
+            </tr>
+            <tr>
+                <td><label for="pwd1">Confirm password:</label></td>
+                <td><input type="password" name="pwd1" id="pwd1"><input type="button" value="show" onclick="fun2(this)"></td>
+            </tr>
+            <tr>
+                <td><label for="course">Course:</label></td>
+                <td>
+                    <select name="course" id="course">
+                        <option value="">--Select course--</option>
+                        <option value="bsc">Bsc</option>
+                        <option value="btech">BTech</option>
+                        <option value="bcom">Bcom</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female"><label for="female">Female</label>
+                    <input type="radio" name="gender" id="others" value="others"><label for="others">Others</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mnum">Mobile number:</label></td>
+                <td><input type="number" name="mnum" id="mnum"></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of birth</label></td>
+                <td><input type="date" name="dob" id="dob" min="2012-05-01" max="2020-05-02"></td>
+            </tr>
+            <tr>
+                <td><label for="add">Address:</label></td>
+                <td><textarea name="add" id="add" cols="30" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Clear"></td>
+                <td><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function fun1(obj){
+            var pass=document.getElementById('pwd');
+            if(obj.value=="show"){
+                obj.value="hide";
+                pass.type="text";
+            }
+            else{
+                obj.value="show";
+                pass.type="password";
+            } 
+        }
+        const fun2=obj=>{
+            var pass=document.getElementById('pwd1');
+            if(obj.value=="show"){
+                obj.value="hide";
+                pass.type="text";
+            }
+            else{
+                obj.value="show";
+                pass.type="password";
+            } 
+        }
+    </script>
+</body>
+</html>

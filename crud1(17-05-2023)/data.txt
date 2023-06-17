@@ -1,0 +1,11 @@
+form --> database --> input.php
+sno --> id
+uname --> user_name
+email --> email
+pwd --> password
+pwd1 --> 
+course --> course
+gender --> gender
+mnum --> mobile_num
+dob --> dob
+add --> address
