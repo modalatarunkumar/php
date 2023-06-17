@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bsccrc,#btechcrc,#bcomcrc{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" name="reg" method="get">
+        <label for="course">Select Course:</label>
+        <select name="course" id="course" onchange="fun()" onmouseleave="fun()">
+            <option value="">--Select a course--</option>
+            <option value="bsc">bsc</option>
+            <option value="btech">Btech</option>
+            <option value="bcom">Bcom</option>
+        </select><br>
+        <div id="bsccrc">
+            <label for="bscsub">Select Course in Bsc:</label>
+            <select name="bscsub" id="bscsub">
+                <option value="">--Select bsc course--</option>
+                <option value="maths">maths</option>
+                <option value="science">science</option>
+                <option value="physics">physics</option>
+                <option value="statistics">statistics</option>
+            </select>    
+        </div>
+        <div id="btechcrc">
+            <label for="btechsub">Select Course in BTech:</label>
+            <select name="btechsub" id="btechsub">
+                <option value="">--Select btech course--</option>
+                <option value="eee">Eee</option>
+                <option value="ece">Ece</option>
+                <option value="cse">Cse</option>
+                <option value="mech">Mech</option>
+                <option value="civil">Civil</option>
+                <option value="agri">Agri</option>
+                
+            </select>
+        </div>
+        <div id="bcomcrc">
+            <label for="bcomsub">Select Course in Bsc:</label>
+            <select name="bcomsub" id="bcomsub">
+                <option value="">--Select bcom course--</option>
+                <option value="comp">Computers</option>
+                <option value="gen">General</option>
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function fun(){
+            var course=document.forms.reg.course.value;
+        if(course=='bsc'){
+            document.getElementById('bsccrc').style.display='block';
+            document.getElementById('btechcrc').style.display='none';
+            document.getElementById('bcomcrc').style.display='none';
+        }
+        else if(course=='btech'){
+            document.getElementById('bsccrc').style.display='none';
+            document.getElementById('btechcrc').style.display='block';
+            document.getElementById('bcomcrc').style.display='none';
+        }
+        else if(course=='bcom'){
+            document.getElementById('bsccrc').style.display='none';
+            document.getElementById('btechcrc').style.display='none';
+            document.getElementById('bcomcrc').style.display='block';
+        }
+        }
+    </script>
+</body>
+</html>
