@@ -1,0 +1,36 @@
+<?php
+    $title="Form";
+    include "include/header.php";
+?>
+<form action="success.php" method="post">
+    <table>
+        <tr>
+            <th><label for="uname">User Name:</label></th>
+            <td><input type="text" name="uname" id="uname"></td>
+        </tr>
+        <tr>
+            <th><label for="mail">Email Id:</label></th>
+            <td><input type="text" name="mail" id="mail"></td>
+        </tr>
+        <tr>
+            <th><label for="pwd">User Name:</label></th>
+            <td><input type="password" name="pwd" id="pwd"></td>
+        </tr>
+        <tr>
+            <th><label for="">Gender:</label></th>
+            <td>
+                <input type="radio" name="gen" value="male" id="male"><label for="male">Male</label>
+                <input type="radio" name="gen" id="female" value="female"><label for="female">Female</label>
+                <input type="radio" name="gen" id="others" value="others"><label for="others">Others</label>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="reset" value="clear"></td>
+            <td><button type="submit">CS </button></td>
+        </tr>
+    </table>
+</form>
+
+<?php
+    include "include/footer.php";
+?>
