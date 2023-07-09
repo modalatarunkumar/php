@@ -3,6 +3,7 @@
     include "include/header.php";
 ?>
 <form action="success.php" method="post">
+    <h1 style="text-align:center;">Registration form</h1>
     <table>
         <tr>
             <th><label for="uname">User Name:</label></th>
@@ -13,7 +14,7 @@
             <td><input type="text" name="mail" id="mail"></td>
         </tr>
         <tr>
-            <th><label for="pwd">User Name:</label></th>
+            <th><label for="pwd">Password:</label></th>
             <td><input type="password" name="pwd" id="pwd"></td>
         </tr>
         <tr>
@@ -26,7 +27,7 @@
         </tr>
         <tr>
             <td><input type="reset" value="clear"></td>
-            <td><button type="submit">CS </button></td>
+            <td><button type="submit" name="submit">CS </button></td>
         </tr>
     </table>
 </form>
