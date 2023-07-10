@@ -1,6 +1,7 @@
 <?php
     $title="View Records";
     include "include/header.php";
+    include "include/auth_check.php";
     include 'db/conn.php';
     // Get all the attendees
     $result=$crud->getAttendees();

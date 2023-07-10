@@ -1,6 +1,7 @@
 <?php
     $title="View Record";
     include "include/header.php";
+    include "include/auth_check.php";
     include 'db/conn.php';
     // Get attendee by id
     if(!isset($_GET['id'])){

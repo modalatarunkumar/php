@@ -1,4 +1,5 @@
 <?php
+    include "include/auth_check.php";
     require "db/conn.php";
     if(!$_GET['id']){
         echo "error";
