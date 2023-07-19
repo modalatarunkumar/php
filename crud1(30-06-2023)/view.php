@@ -29,7 +29,11 @@
         <th>Gender: </th>
         <td><?php echo $result['gender'] ?></td>
     </tr>
-    
+
+    <tr>
+        <td>Image:</td>
+        <td><img src="<?php echo empty($result['avatar_path'])? "uploads/blank.jpg":$result['avatar_path']; ?>" height="200px" width="200px"></td>
+    </tr>
 </table>
 <?php } ?>
 

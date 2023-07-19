@@ -7,15 +7,16 @@
             $this->db=$conn;
         }
         // function to insert a new record to the kumar database
-        public function insertAttendees($uname,$email,$password,$gender){
+        public function insertAttendees($uname,$email,$password,$gender,$avatar_path){
             try {
                 // define sql statement to be executed
-                $sql = "insert into sample(uname,email,password,gender) values(:uname,:email,:password,:gender)";
+                $sql = "insert into sample(uname,email,password,gender,avatar_path) values(:uname,:email,:password,:gender,:avatar_path)";
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':uname',$uname);
                 $stmt->bindparam(':email',$email);
                 $stmt->bindparam(':password',$password);
                 $stmt->bindparam(':gender',$gender);
+                $stmt->bindparam(':avatar_path',$avatar_path);
                 $stmt->execute();
                 return true;
                 

@@ -2,7 +2,7 @@
     $title="Form";
     include "include/header.php";
 ?>
-<form action="success.php" method="post">
+<form action="success.php" method="post" enctype="multipart/form-data">
     <h1 style="text-align:center;">Registration form</h1>
     <table>
         <tr>
@@ -24,6 +24,10 @@
                 <input type="radio" name="gen" id="female" value="female"><label for="female">Female</label>
                 <input type="radio" name="gen" id="others" value="others"><label for="others">Others</label>
             </td>
+        </tr>
+        <tr>
+            <td><label for="avatar">Upload Image (Optional)</label></td>
+            <td><input type="file" name="avatar" id="avatar" accept="image/*"></td>
         </tr>
         <tr>
             <td><input type="reset" value="clear"></td>

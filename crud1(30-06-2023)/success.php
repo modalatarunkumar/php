@@ -9,8 +9,15 @@ if(isset($_POST['submit'])){
     $email=$_POST['mail'];
     $pass=$_POST['pwd'];
     $gender=$_POST['gen'];
+
+    $orig_file = $_FILES['avatar']['tmp_name'];
+    $ext = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
+    $target_dir = "uploads/";
+    // $destination = $target_dir . basename($_FILES['images']['name']);
+    $destination = "$target_dir$name.$ext";
+    move_uploaded_file($orig_file,$destination);
     // Call function to insert and track success or not
-    $isSuccess=$crud->insertAttendees($name,$email,$pass,$gender);
+    $isSuccess=$crud->insertAttendees($name,$email,$pass,$gender,$destination);
     if($isSuccess){
         echo "<h1>You have been registered</h1>";
     }
@@ -31,7 +38,7 @@ else if($_POST){
     echo "<h1>Email Id: ".$_POST['mail']."</h1>";
     echo "<h1>Password: ".$_POST['pwd']."</h1>";
     echo "<h1>Gender: ".$_POST['gen']."</h1>";
-    
+    echo '<img src="'.$destination.'" width="200px" height="200px">';
 }
 
 include "include/footer.php";
